@@ -1,0 +1,27 @@
+- [x] Inspect the supplied reel and identify its scrolling, layering, and scene-transition language.
+- [x] Define the legal-world theme sequence and the Earth-scale visual treatment for Lexora.
+- [x] Create the required supporting visual assets and update the design direction.
+- [x] Implement scroll-reactive themes, layered Earth visuals, and mobile fallbacks.
+- [x] Validate the revised experience at desktop and mobile widths, then checkpoint the completed enhancement. Desktop and mobile layouts were captured, the Legal World rail was verified to move the page into the Authority Trail chapter with its corresponding Earth-scale backdrop, and the Clear Path control was confirmed to activate the final resolution scene above the pricing deck.
+- [x] Define concise plan explanations, visitor-fit signals, and a transparent prototype next step for each pricing tier.
+- [x] Build the selectable plan-detail guide with in-context recommendations and a guided next action.
+- [x] Validate the guide across desktop and mobile layouts, including selection, dismissal, and plan switching. The Lawyer — Pro card was selected in the live browser, opening its fit explanation, three-step route, alternative recommendation, guided chat action, and explicit no-payment notice. The live guide was then switched to Lawyer — Basic, correctly replacing the explanation, recommended route, and alternative recommendation without leaving the page. The Basic guide’s next-step action was also verified: it opens the Lexora chat with a plan-specific, prefilled decision prompt and reiterates that no payment has been initiated.
+- [x] Define the interactive globe behavior, evidence-orbit interactions, and a stable reduced-motion fallback.
+- [ ] Build the interactive 3D scene with pointer movement, drag control, and scene-navigation responses.
+- [x] Verify the 3D controls at desktop and mobile sizes, including graceful fallback when motion is reduced. The mobile hero retained its accessible Judicial Instrument controls and readable composition. On desktop, both the Balance and Evidence controls were exercised in the live browser, correctly updating the active state, camera focus, and legal context copy while preserving the underlying WebGL scene.
+- [x] Prepare the supplied gavel-and-scales image as a production web asset and define its layered scroll movement.
+- [x] Add the floating courtroom artifact with depth-preserving scroll choreography and mobile fallback behavior.
+- [x] Verify the floating artifact’s placement and movement at desktop and mobile sizes. Desktop inspection confirmed that the framed courtroom image begins as a subtle legal exhibit near the hero and travels upward into the procedure-and-plans area as the reader moves down the page; the mobile composition preserves it at a smaller, lower-contrast scale.
+- [x] Prepare the supplied signing, justice-statue, and gavel images as managed web assets and assign each a distinct frame route.
+- [x] Build the multi-image exhibit choreography with staggered upward and downward motion, depth layers, and content-safe positioning.
+- [x] Verify each exhibit’s desktop and mobile placement across the legal-world scroll journey. The live page shows the three supplied legal images as separate framed exhibits with their own legal labels. At the procedure-and-plans chapter, the left/right exhibit routes have shifted away from the hero in opposite directions without covering the procedure copy or plan cards; the compact mobile rules retain scaled-down exhibit motion.
+- [x] Map the supplied legal images to full-frame story chapters with safe areas for high-contrast content.
+- [x] Replace the small floating exhibits with large, scroll-reactive legal image chapters.
+- [x] Verify the new full-frame compositions at desktop and mobile widths.
+- [x] Create a complete downloadable Lexora source archive while excluding transient build and dependency folders.
+- [x] Verify the archive contents and attach it to the delivery message. The ZIP includes 106 source, configuration, and project-documentation entries and excludes transient dependency, build, version-control, and development-log folders.
+- [x] Add GitHub setup documentation and repository-specific ignore rules to the source package.
+- [ ] Create and verify a clean archive suitable for extraction and direct GitHub push.
+- [x] Design a court-inspired 3D composition that gives equal weight to the gavel, scales, case files, and judicial atmosphere.
+- [x] Create legal-court visual materials and replace the globe-focused hero art direction.
+- [x] Implement the interactive courtroom scene with clear, accessible object controls. The Balance control was verified in the live browser: it changed the active control state, selected the scales-focused camera target, and updated the judicial context copy without interrupting the page.

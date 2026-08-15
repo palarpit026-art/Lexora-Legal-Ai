@@ -1,64 +1,54 @@
-# LexAI Prototype
+# Lexora — 3D AI Legal Assistant
 
-LexAI is a project I’m building to explore how AI can make legal information, research, and case related work simpler and more accessible.
+Lexora is a React and Vite front-end prototype for an AI legal-assistant experience. It combines an interactive WebGL courtroom instrument, scroll-driven legal storytelling, guided plan selection, and supplied legal imagery used as full-frame visual chapters.
 
-The idea is to create one platform where **lawyers, law students, legal researchers, and everyday users** can explore legal information, organize cases, review documents, research legal topics, and interact with an AI assistant.
+## Run locally
 
-I started building LexAI because I wanted to see what a modern legal platform could look like if AI was built into the experience from the beginning instead of being just another chatbot.
+Use Node.js 20 or later and pnpm 10 or later.
 
-**Screens included:**
-- **Home** — daily brief, ask bar, quick actions, legal intelligence feed, active cases
-- **Cases** ("Case Spaces") — searchable, filterable case list
-- **Research** — recent research questions + ask bar
-- **Profile** — account info and usage stats
-- **Chat** — opens from any ask bar or list item, with mock contextual responses
+```bash
+pnpm install
+pnpm dev
+```
 
-All data (cases, stats, chat replies) is hardcoded/mocked in `script.js` — there's no real backend or AI connection yet.
+The development server starts on the local URL printed by Vite. Build a production bundle with:
 
-## Running it locally
+```bash
+pnpm build
+pnpm start
+```
 
-No install needed. Either:
-- Open `index.html` directly in a browser, or
-- Serve it locally so relative paths behave exactly like production:
-  ```bash
-  python3 -m http.server 8000
-  # then visit http://localhost:8000
-  ```
+## GitHub repository setup
 
-## Adding this to your GitHub repo
+1. Extract the `lexora-3d-github-ready.zip` archive.
+2. Create an empty repository on GitHub.
+3. From the extracted `lexora-3d` folder, run:
 
-**Option A — new repo for just this prototype:**
 ```bash
 git init
 git add .
-git commit -m "Add LexAI prototype"
+git commit -m "Initial Lexora 3D legal experience"
 git branch -M main
-git remote add origin https://github.com/<your-username>/<repo-name>.git
+git remote add origin https://github.com/YOUR-USERNAME/YOUR-REPOSITORY.git
 git push -u origin main
 ```
 
-**Option B — inside an existing project:**
-Copy `index.html`, `style.css`, and `script.js` into a subfolder (e.g. `/prototype`) of your existing repo, commit, and push.
+Replace the repository URL with your own GitHub repository address.
 
-## Deploying it live (GitHub Pages)
+## Project structure
 
-This repo includes `.github/workflows/deploy.yml`, which auto-publishes to GitHub Pages on every push to `main`.
+| Path | Purpose |
+| --- | --- |
+| `client/src/pages/Home.tsx` | Main Lexora experience, section content, plan guide, and scroll behavior. |
+| `client/src/components/CourtroomScene.tsx` | WebGL judicial instrument table with gavel, scales, files, and accessible scene controls. |
+| `client/src/index.css` | Juris Orbital visual system, responsive layouts, full-frame legal chapters, and animations. |
+| `client/public/assets/` | Self-contained images required by the GitHub-ready version. |
+| `server/index.ts` | Lightweight static server used by the production build. |
 
-1. Push this repo to GitHub (see above).
-2. In the repo, go to **Settings → Pages**.
-3. Under **Build and deployment → Source**, select **GitHub Actions**.
-4. Push a commit (or re-run the workflow from the **Actions** tab) — your site will be live at:
-   ```
-   https://<your-username>.github.io/<repo-name>/
-   ```
+## Visual assets
 
-No build tooling required — it's static files, so the workflow just uploads them as-is.
+The GitHub-ready archive includes all required image files in `client/public/assets/`. The source in that archive references local `/assets/...` paths rather than platform-hosted storage URLs, so the project can be run or deployed independently after installation.
 
-## Next steps toward a real product
+## Notes
 
-This prototype is UI-only. To make it functional:
-- Replace the mock case data in `script.js` with calls to a real backend/database.
-- Replace `mockAnswer()` with a real API call to an LLM (with case documents as context) — this needs a small server, since browsers can't safely hold an API key.
-- Add auth (the Profile screen assumes a logged-in advocate).
-- Add citation verification and document intelligence as real services once you're past the read-only prototype stage.
-LexAI Prototype
+This is a front-end prototype. The chat, plan selection, and product actions are UI demonstrations and do not process payments, create accounts, or provide legal advice.
